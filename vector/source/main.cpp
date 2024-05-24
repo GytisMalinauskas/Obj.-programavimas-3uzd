@@ -1,17 +1,17 @@
 #include "../headers/main.h"
 int number1,skaicius,n,m;  
-vector<string> names;
-vector<string> surnames;
-vector <studentas> s; //studentai
+myVector<string> names;
+myVector<string> surnames;
+myVector <studentas> s; //studentai
 int main() 
 {
   try{
   auto start=chrono::high_resolution_clock::now();
   srand(time(0));
   string duomPav;
-  vector <studentas> s; //studentai
-  vector <studentas> k; //kieti s
-  vector <studentas> l; //lievi s
+  myVector <studentas> s; //studentai
+  myVector <studentas> k; //kieti s
+  myVector <studentas> l; //lievi s
   
   srand(time(nullptr));
 

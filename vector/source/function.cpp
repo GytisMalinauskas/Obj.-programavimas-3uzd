@@ -220,7 +220,7 @@ double studentas::finalGrade(int n, int sum, int egz){
         {return 0.6*egz;}
         }
 
-double studentas::median(const vector<int> &nd, int n, int egz){
+double studentas::median(const myVector<int> &nd, int n, int egz){
   if(n % 2 == 0 && n > 0)
         {return (nd[n/2-1] + nd[n/2])/2.0*0.4 + 0.6*egz;}
     else if(n % 2 != 0 && n > 0)
@@ -252,11 +252,11 @@ void initializeNamesAndSurnames() {
     surnames.push_back("Moore");
     surnames.push_back("Taylor");
 }
-string generateRandomName(vector <string> names) {
+string generateRandomName(myVector <string> names) {
     string name2 = names[rand() % names.size()];
     return name2;
 }
-string generateRandomSurname(vector <string> surnames) {
+string generateRandomSurname(myVector <string> surnames) {
     string surname2 = surnames[rand() % surnames.size()];
     return surname2;
 }
@@ -266,7 +266,7 @@ bool isBelowAverage(const studentas& stud) {
 bool isBelowMedian(const studentas& stud) {
     return stud.getMed() < 5.0;
 }
-void FailoSkaitymas(vector <studentas> &s, string &duomPav)
+void FailoSkaitymas(myVector <studentas> &s, string &duomPav)
 {
   try{
   system("ls *.txt");
@@ -339,7 +339,7 @@ void VarduGeneravimui()
       exit(1);
     }
 }
-void Isvedimas(vector <studentas> s, vector <studentas> &l, vector <studentas> &k)
+void Isvedimas(myVector <studentas> s, myVector <studentas> &l, myVector <studentas> &k)
 {
   try
   {
@@ -524,7 +524,7 @@ bool rikiavimasVid(studentas& s1, studentas& s2) {
 bool rikiavimasMed(studentas& s1, studentas& s2) {
     return s1.getMed() < s2.getMed();
 }
-void Sorting(vector<studentas>& s, vector<studentas>& k, vector<studentas>& l, string choice, int rikiavimas, int strategy) {
+void Sorting(myVector<studentas>& s, myVector<studentas>& k, myVector<studentas>& l, string choice, int rikiavimas, int strategy) {
     auto start_rusiavimas_visu = chrono::high_resolution_clock::now();
 
     if (rikiavimas == 1) {

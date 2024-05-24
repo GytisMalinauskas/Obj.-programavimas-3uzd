@@ -6,6 +6,7 @@
 #include <iostream>
 #include <algorithm>
 #include "zmogus.h"
+#include "myVector.h"
 using namespace std;
 
 class studentas : public zmogus
@@ -13,7 +14,7 @@ class studentas : public zmogus
   private:
   int egz;
   double vid;
-  vector <int> nd;
+  myVector <int> nd;
   double med;
 
   public:
@@ -21,7 +22,7 @@ class studentas : public zmogus
   studentas(const string &vard, const string &pavard);
   inline string getName() const { return name; }
   inline string getSurname() const { return surname; }
-  vector<int> getND() const { return nd; }
+  myVector<int> getND() { return nd; }
   int getEgz() const { return egz; }
   double getMed() const { return med; }
   double getVid() const { return vid; }
@@ -39,7 +40,7 @@ class studentas : public zmogus
   void deleteLastNd() { this->nd.pop_back(); }
   double finalGrade(int n, int sum, int egz);
   void clearStudent() { this->name.clear(); this->surname.clear(); this->nd.clear(); this->egz = 0; this->med = 0.0; this->vid = 0.0; }      
-  double median(const vector<int> &nd, int n, int egz);
+  double median(const myVector<int> &nd, int n, int egz);
   void print() const override{};
  
   studentas(const studentas &LaikinasStudentas);
@@ -55,9 +56,9 @@ class studentas : public zmogus
 };
 extern int number1;
 extern int skaicius;
-extern vector<string> names;
-extern vector<string> surnames;
-extern vector <studentas> s; //studentai
+extern myVector<string> names;
+extern myVector<string> surnames;
+extern myVector <studentas> s; //studentai
 extern int n;
 extern int m;
 #endif
