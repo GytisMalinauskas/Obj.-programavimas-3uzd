@@ -36,8 +36,4 @@ bool isBelowAverage(const studentas& stud);
 string generateRandomName(vector <string> names);
 string generateRandomSurname(vector <string> surnames);
 void GenerateFile (int kiekis, int nd_kiekis, string &fileName);
-/*void test_Vector();
-void print_check(const char* desc, const char* expected, const char* actual);
-void print_check(const char* desc, int expected, int actual);
-void print_check(const char* desc, const void* expected, const void* actual);*/
 #endif

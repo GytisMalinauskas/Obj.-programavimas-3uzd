@@ -28,14 +28,14 @@ class studentas : public zmogus
   double getVid() const { return vid; }
   int ndSize() const { return nd.size(); }
   void ndSort() { sort(nd.begin(), nd.end()); }
-  int ndSum() { return accumulate(nd.begin(), nd.end(), 0); }
+  int ndSum() {return accumulate(nd.begin(), nd.end(), 0); }
   int getLastND() { return nd.back(); }
 
   void setName(string vard) { this->name = vard; }
   void setSurname(string pav) { this->surname= pav; }
-  void setEgz(int egz2) { this->egz= egz2; }
-  void setMed(double med2) { this->med = med2; }
-  void setVid(double vid2) { this->vid = vid2; }
+  void setEgz(int egz2) {  this->egz= egz2; }
+  void setMed(double med2) {  this->med = med2; }
+  void setVid(double vid2) {  this->vid = vid2; }
   void setND(int nd2) { this->nd.push_back(nd2); }
   void deleteLastNd() { this->nd.pop_back(); }
   double finalGrade(int n, int sum, int egz);

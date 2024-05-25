@@ -15,8 +15,26 @@ int main()
   Vector <studentas> l; //lievi s
   
   srand(time(nullptr));
-//test_Vector();
         //test
+        // Pradėti v1 užpildymo laiko matavimą
+        auto start1 = chrono::high_resolution_clock::now();
+unsigned int sz = 10000;  // 100000, 1000000, 10000000, 100000000
+std::vector<int> v1;
+for (unsigned int i = 1; i <= sz; ++i)
+  v1.push_back(i);
+// Baigti v1 užpildymo laiko matavimą
+auto end1 = chrono::high_resolution_clock::now();
+auto duration1 = chrono::duration_cast<chrono::milliseconds>(end1-start1).count();
+cout<<"std::vector uzpildymas truko: "<<duration1/1000.0<<" sekundes"<<endl;
+// Pradėti v2 užpildymo laiko matavimą
+auto start2 = chrono::high_resolution_clock::now();
+Vector<int> v2;
+for (unsigned int i = 1; i <= sz; ++i)
+  v2.push_back(i);
+// Baigti v2 užpildymo laiko matavimą 
+auto end2 = chrono::high_resolution_clock::now();
+auto duration2 = chrono::duration_cast<chrono::milliseconds>(end2-start2).count();
+cout<<"Vector uzpildymas truko: "<<duration2/1000.0<<" sekundes"<<endl;
         //zmogus zm;
         /*
         studentas studentas1("Gytis", "Malinauskas");
@@ -88,8 +106,9 @@ int main()
       while(true){
       cin>>st;
       if(st.getName()=="q")
-      {break;}
+      {break;}st.getName();
       s.push_back(std::move(st));}
+      
       }
       names.clear();
       surnames.clear();
