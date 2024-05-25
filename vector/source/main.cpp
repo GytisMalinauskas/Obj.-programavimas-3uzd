@@ -1,8 +1,8 @@
 #include "../headers/main.h"
 #include "../headers/function.h"
 int number1,skaicius,n,m;  
-Vector<string> names;
-Vector<string> surnames;
+vector<string> names;
+vector<string> surnames;
 Vector <studentas> s; //studentai
 int main() 
 {
@@ -87,7 +87,7 @@ int main()
       if(number1==2){
       while(true){
       cin>>st;
-      if(st.getName()=="quit")
+      if(st.getName()=="q")
       {break;}
       s.push_back(std::move(st));}
       }

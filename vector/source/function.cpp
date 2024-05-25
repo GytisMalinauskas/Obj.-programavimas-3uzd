@@ -89,8 +89,10 @@ istream& operator>>(istream& manual, studentas &Laikinasstudentas){
         }
         else if(skaicius==3)
         {
-            Laikinasstudentas.setName(generateRandomName(names));
-            Laikinasstudentas.setSurname(generateRandomSurname(surnames)); 
+          string vardas=generateRandomName(names);
+          string pavarde=generateRandomSurname(surnames);
+            Laikinasstudentas.setName(vardas);
+            Laikinasstudentas.setSurname(pavarde); 
         }
           for(int j=0; j<n; j++)
           {
@@ -99,12 +101,13 @@ istream& operator>>(istream& manual, studentas &Laikinasstudentas){
             {
               cout<<"Enter homework result "<<j+1<<": ";
               result=intIvestis(1,10);
+              Laikinasstudentas.setND(result);
             }
             if(skaicius==2||skaicius==3)
             {
               result=1+rand()%(10);
+              Laikinasstudentas.setND(result);
             }
-            Laikinasstudentas.setND(result);
           }
             if(skaicius==1)
             {
@@ -126,10 +129,10 @@ istream& operator>>(istream& manual, studentas &Laikinasstudentas){
       if(skaicius==1||skaicius==2)
         {
           string vardas,pavarde;
-          cout<<"Enter name or type 'quit' to quit: "; 
+          cout<<"Enter name or type 'q' to quit: "; 
           manual>>vardas;
           Laikinasstudentas.setName(vardas);
-          if (vardas=="quit")
+          if (vardas=="q")
           {break;}
           
           cout<<"Enter surname: ";
@@ -142,11 +145,15 @@ istream& operator>>(istream& manual, studentas &Laikinasstudentas){
           cout<<"Enter g (to generate 1 student) or q (to quit): "; 
           gq=SimbolioTikrinimas();
           if(gq=="q")
-          {break;}
+          {Laikinasstudentas.setName(gq);
+          break;
+          }
           else if(gq=="g")
           {
-            Laikinasstudentas.setName(generateRandomName(names));
-            Laikinasstudentas.setSurname(generateRandomSurname(surnames));
+            string vardas = generateRandomName(names);
+            string pavarde = generateRandomSurname(surnames);
+            Laikinasstudentas.setName(vardas);
+            Laikinasstudentas.setSurname(pavarde);
           }
         }
         
@@ -166,9 +173,8 @@ istream& operator>>(istream& manual, studentas &Laikinasstudentas){
         {
           while(true)
           {
-            int i=0;
             string gq2;
-            cout<<"Enter g (to generate "<<i+1<<" homework result) or q (to quit): "; 
+            cout<<"Enter g (to generate 1 homework result) or q (to quit): "; 
             gq2=SimbolioTikrinimas();
             if(gq2=="q")
             {break;}
@@ -176,6 +182,7 @@ istream& operator>>(istream& manual, studentas &Laikinasstudentas){
             {
               result=1+rand()%(10);
               Laikinasstudentas.setND(result);
+              
             }
           } 
         }
@@ -251,11 +258,11 @@ void initializeNamesAndSurnames() {
     surnames.push_back("Moore");
     surnames.push_back("Taylor");
 }
-string generateRandomName(Vector <string> names) {
+string generateRandomName(vector <string> names) {
     string name2 = names[rand() % names.size()];
     return name2;
 }
-string generateRandomSurname(Vector <string> surnames) {
+string generateRandomSurname(vector <string> surnames) {
     string surname2 = surnames[rand() % surnames.size()];
     return surname2;
 }

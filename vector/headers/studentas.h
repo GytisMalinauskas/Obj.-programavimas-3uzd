@@ -56,8 +56,8 @@ class studentas : public zmogus
 };
 extern int number1;
 extern int skaicius;
-extern Vector<string> names;
-extern Vector<string> surnames;
+extern vector<string> names;
+extern vector<string> surnames;
 extern Vector <studentas> s; //studentai
 extern int n;
 extern int m;
