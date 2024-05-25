@@ -43,7 +43,7 @@ char SimbolioTikrinimas()
         try{
         if(!(cin >> budas) || (budas != 'g' && budas != 'q'))
         {
-            throw "Įvestas netinkamas simbolis. Įveskite dar kartą 'v' arba 'm': ";
+            throw "Įvestas netinkamas simbolis. Įveskite dar kartą 'g' arba 'q': ";
         }
         return budas;
         //break;
@@ -63,7 +63,7 @@ char SimbolioTikrinimas2()
         try{
         if(!(cin >> budas) || (budas != 'a' && budas != 'm'))
         {
-            throw "Įvestas netinkamas simbolis. Įveskite dar kartą 'v' arba 'm': ";
+            throw "Įvestas netinkamas simbolis. Įveskite dar kartą 'a' arba 'm': ";
         }
         return budas;
         //break;
@@ -83,7 +83,7 @@ char SimbolioTikrinimas3()
         try{
         if(!(cin >> budas) || (budas != 'f' && budas != 'c'))
         {
-            throw "Įvestas netinkamas simbolis. Įveskite dar kartą 'v' arba 'm': ";
+            throw "Įvestas netinkamas simbolis. Įveskite dar kartą 'f' arba 'c': ";
         }
         return budas;
         //break;

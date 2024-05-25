@@ -17,22 +17,27 @@
 #include <cerrno>
 #include <random>
 #include <chrono>
+#include <cassert>
 #include "studentas.h"
 #include "error.h"
 #include "zmogus.h"
 #include "myVector.h"
 
-void Skaicius1(myVector<studentas>& s, int &m, int skaicius, int MinP, int MaxP);
-void Skaicius2(myVector<studentas>& s, int skaicius, int MinP, int MaxP);
-void FailoSkaitymas(myVector <studentas> &s, string &duomPav);
+void Skaicius1(Vector<studentas>& s, int &m, int skaicius, int MinP, int MaxP);
+void Skaicius2(Vector<studentas>& s, int skaicius, int MinP, int MaxP);
+void FailoSkaitymas(Vector <studentas> &s, string &duomPav);
 void VarduGeneravimui();
-void Sorting(myVector<studentas>& s,myVector<studentas> &k, myVector <studentas> &l, string choice, int rikiavimas, int strategy);
-void Isvedimas(myVector <studentas> s, myVector <studentas> &l, myVector <studentas> &k);
+void Sorting(Vector<studentas>& s,Vector<studentas> &k, Vector <studentas> &l, string choice, int rikiavimas, int strategy);
+void Isvedimas(Vector <studentas> s, Vector <studentas> &l, Vector <studentas> &k);
 bool rikiavimasVid(studentas& s1, studentas& s2);
 bool rikiavimasMed(studentas& s1, studentas& s2);
 bool isBelowMedian(const studentas& stud);
 bool isBelowAverage(const studentas& stud);
-string generateRandomName(myVector <string> names);
-string generateRandomSurname(myVector <string> surnames);
+string generateRandomName(Vector <string> names);
+string generateRandomSurname(Vector <string> surnames);
 void GenerateFile (int kiekis, int nd_kiekis, string &fileName);
+/*void test_Vector();
+void print_check(const char* desc, const char* expected, const char* actual);
+void print_check(const char* desc, int expected, int actual);
+void print_check(const char* desc, const void* expected, const void* actual);*/
 #endif

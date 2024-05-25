@@ -1,22 +1,24 @@
 #include "../headers/main.h"
+#include "../headers/function.h"
 int number1,skaicius,n,m;  
-myVector<string> names;
-myVector<string> surnames;
-myVector <studentas> s; //studentai
+Vector<string> names;
+Vector<string> surnames;
+Vector <studentas> s; //studentai
 int main() 
 {
   try{
   auto start=chrono::high_resolution_clock::now();
   srand(time(0));
   string duomPav;
-  myVector <studentas> s; //studentai
-  myVector <studentas> k; //kieti s
-  myVector <studentas> l; //lievi s
+  Vector <studentas> s; //studentai
+  Vector <studentas> k; //kieti s
+  Vector <studentas> l; //lievi s
   
   srand(time(nullptr));
-
+//test_Vector();
         //test
         //zmogus zm;
+        /*
         studentas studentas1("Gytis", "Malinauskas");
         studentas studentas2("Vardas", "Pavardaitis");
         studentas2.setND(10);
@@ -40,6 +42,7 @@ int main()
         output << studentas5 << endl;
         output << studentas6 << endl;
         output.close();
+*/
 
   while (true)
   {

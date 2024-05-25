@@ -7,5 +7,6 @@
 #include "error.h"
 #include "function.h"
 #include "zmogus.h"
+#include "myVector.h"
 
 #endif
