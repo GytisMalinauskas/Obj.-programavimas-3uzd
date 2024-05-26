@@ -23,7 +23,7 @@
 
 *100000000 elementu uzpildymo metu ivyksta po 27 perskirstymus*\
 \
-<img width="385" alt="Screenshot 2024-05-26 at 11 26 46" src="https://github.com/GytisMalinauskas/Obj.-programavimas-3uzd./assets/159523970/f65b7f11-4e3d-43f6-b7dc-27e72b428150">
+<img width="378" alt="Screenshot 2024-05-26 at 11 34 25" src="https://github.com/GytisMalinauskas/Obj.-programavimas-3uzd./assets/159523970/f8ef4b68-d834-4839-a413-7201c5a84821">
 
 
 # Programos naudojimo instrukcija
