@@ -3,11 +3,11 @@
 *CPU: 2,6 GHz 6-Core Intel Core i7*\
 *RAM: 16 GB 2400 MHz DDR4*\
 *HDD: Macintosh HD 500GB*\
-\
+
 
 ## Vector ir std::vector uzpildymo tyrimas
 
-*Vetoriams uzpildyti naudota `push_back()` funckija*\
+*Vetoriams uzpildyti naudota `push_back()` funkcija*\
 *Tyrimas atliktas uzpildant su*\ 
 *10000, 100000, 10000000, 10000000, 100000000 elementu*\
 *Tyrimui naudotas -O3 optimizavimo flagas*\
@@ -25,6 +25,69 @@
 \
 <img width="378" alt="Screenshot 2024-05-26 at 11 34 25" src="https://github.com/GytisMalinauskas/Obj.-programavimas-3uzd./assets/159523970/f8ef4b68-d834-4839-a413-7201c5a84821">
 
+## STD::VECTOR konteinerio programos sparto tyrimas
+
+| `100000 studentu` | -O1 | -O2 | -O3 |
+|:-------------------:|:------------:|:-------------:|:------------:|
+| Failo Skaitymas     | 0.16 | 0.16 | 0.16 |
+| Studentu Rikiavimas | 0.03 | 0.03 | 0.03 |
+| Studentu Skirstymas | 0.01 | 0.01 | 0.01 |
+|`.exe` Failo dydis   | 101 KB | 103 KB | 118 KB |
+
+| `1000000 studentu` | -O1 | -O2 | -O3 |
+|:-------------------:|:------------:|:-------------:|:------------:|
+| Failo Skaitymas     | 1.48 | 1.44 | 1.43 |
+| Studentu Rikiavimas | 0.29 | 0.3 | 0.3 |
+| Studentu Skirstymas | 0.13 | 0.14 | 0.14 |
+|`.exe` Failo dydis   | 101 KB | 103 KB | 118 KB |
+
+| `10000000 studentu` | -O1 | -O2 | -O3 |
+|:-------------------:|:------------:|:-------------:|:------------:|
+| Failo Skaitymas     | 16.1 | 15.81 | 15.47 |
+| Studentu Rikiavimas | 3.7 | 3.82 | 3.67 |
+| Studentu Skirstymas | 1.76 | 1.72 | 1.74 |
+|`.exe` Failo dydis   | 101 KB | 103 KB | 118 KB |
+
+## VECTOR konteinerio programos sparto tyrimas
+
+| `100000 studentu` | -O1 | -O2 | -O3 |
+|:-------------------:|:------------:|:-------------:|:------------:|
+| Failo Skaitymas     | 0.158 | 0.144 | 0.143 |
+| Studentu Rikiavimas | 0.036 | 0.037 | 0.036 |
+| Studentu Skirstymas | 0.008 | 0.009 | 0.009 |
+|`.exe` Failo dydis   | 99 KB | 102 KB | 122 KB |
+
+| `1000000 studentu` | -O1 | -O2 | -O3 |
+|:-------------------:|:------------:|:-------------:|:------------:|
+| Failo Skaitymas     | 1.427 | 1.38 | 1.337 |
+| Studentu Rikiavimas | 0.372 | 0.388 | 0.373 |
+| Studentu Skirstymas | 0.146 | 0.142 | 0.117 |
+|`.exe` Failo dydis   | 99 KB | 102 KB | 122 KB |
+
+| `10000000 studentu` | -O1 | -O2 | -O3 |
+|:-------------------:|:------------:|:-------------:|:------------:|
+| Failo Skaitymas     | 16.56 | 15.096 | 14.651 |
+| Studentu Rikiavimas | 4.972 | 5.09 | 4.384 |
+| Studentu Skirstymas | 1.924 | 1.766 | 1.681 |
+|`.exe` Failo dydis   | 99 KB | 102 KB | 122 KB |
+
+## STD::VECTOR konteinerio programos spartos tyrimas (vidurkiai)
+
+| `Vidurkis`          | -O1    | -O2    | -O3    |
+|:-------------------:|:------:|:------:|:------:|
+| Failo Skaitymas     | 5.913  | 5.803  | 5.68   |
+| Studentu Rikiavimas | 1.34   | 1.383  | 1.333  |
+| Studentu Skirstymas | 0.633  | 0.623  | 0.63   |
+| `.exe` Failo dydis  | 101 KB | 103 KB | 118 KB |
+
+## VECTOR konteinerio programos spartos tyrimas (vidurkiai)
+
+| `Vidurkis`          | -O1    | -O2    | -O3    |
+|:-------------------:|:------:|:------:|:------:|
+| Failo Skaitymas     | 6.048  | 5.54   | 5.377  |
+| Studentu Rikiavimas | 1.793  | 1.838  | 1.598  |
+| Studentu Skirstymas | 0.693  | 0.639  | 0.602  |
+| `.exe` Failo dydis  | 99 KB  | 102 KB | 122 KB |
 
 # Programos naudojimo instrukcija
 
