@@ -97,6 +97,10 @@ public:
     size_t size() const {
         return size_;
     }
+    // capacity
+    size_t capacity() const {
+        return capacity_;
+        }
 
     // empty
     bool empty() const {

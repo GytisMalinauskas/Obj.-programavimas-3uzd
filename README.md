@@ -4,33 +4,22 @@
 *RAM: 16 GB 2400 MHz DDR4*\
 *HDD: Macintosh HD 500GB*\
 \
-*Tyrimai yra atliekami su 100000, 1000000 ir 10000000 studentu*\
-*Kiekvienas studentas turi 10 namu darbu*\
-*Tyrimui naudota 3-oji strategija*\
-*Laikai aprasyti sekundes formatu*
 
-## Vector programos su CLASS tyrimas
+## Vector ir std::vector uzpildymo tyrimas
 
-| `100000 studentu` | -O1 | -O2 | -O3 |
-|:-------------------:|:------------:|:-------------:|:------------:|
-| Failo Skaitymas     | 0.16 | 0.16 | 0.16 |
-| Studentu Rikiavimas | 0.03 | 0.03 | 0.03 |
-| Studentu Skirstymas | 0.01 | 0.01 | 0.01 |
-|`.exe` Failo dydis   | 101 KB | 103 KB | 118 KB |
+*Vetoriams uzpildyti naudota `push_back()` funckija*\
+*Tyrimas atliktas uzpildant su*\ 
+*10000, 100000, 10000000, 10000000, 100000000 elementu*\
+*Tyrimui naudotas -O3 optimizavimo flagas*\
+*Laikai aprasyti milisekundziu formatu*
 
-| `1000000 studentu` | -O1 | -O2 | -O3 |
-|:-------------------:|:------------:|:-------------:|:------------:|
-| Failo Skaitymas     | 1.48 | 1.44 | 1.43 |
-| Studentu Rikiavimas | 0.29 | 0.3 | 0.3 |
-| Studentu Skirstymas | 0.13 | 0.14 | 0.14 |
-|`.exe` Failo dydis   | 101 KB | 103 KB | 118 KB |
-
-| `10000000 studentu` | -O1 | -O2 | -O3 |
-|:-------------------:|:------------:|:-------------:|:------------:|
-| Failo Skaitymas     | 16.1 | 15.81 | 15.47 |
-| Studentu Rikiavimas | 3.7 | 3.82 | 3.67 |
-| Studentu Skirstymas | 1.76 | 1.72 | 1.74 |
-|`.exe` Failo dydis   | 101 KB | 103 KB | 118 KB |
+| `elementu skaicius` | std::vector | Vector |
+|:-------------------:|:------------:|:-------------:|
+| 10000 | 0.085 | 0.047 |
+| 100000 | 0.613 | 0.228 |
+| 1000000 | 5.675 | 2.458 |
+| 10000000  | 68.139 | 28.273 |
+| 100000000  | 585.604 | 393.132 |
 
 # Programos naudojimo instrukcija
 
