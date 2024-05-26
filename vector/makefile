@@ -5,6 +5,10 @@ CXXFLAGS = -std=c++11 -Wall -Iheaders
 # Šaltinio failai
 SRC = $(wildcard source/*.cpp)
 
+# Testų šaltinio failai
+TEST_SRC = $(wildcard test/*.cpp)
+TESTS = $(TEST_SRC:%.cpp=%)
+
 # Vykdomasis failas
 TARGET = run
 
@@ -40,6 +44,14 @@ $(TARGET)_O3:
 	@echo "Building target with -O3: $@"
 	$(CXX) $(CXXFLAGS) $(OPT_FLAGS_O3) -o $@ $(SRC)
 
+# Testų vykdymo taisyklė
+test: $(TESTS)
+
+$(TESTS): % : %.cpp
+	@echo "Running test: $@"
+	$(CXX) $(CXXFLAGS) -o $@ $^
+	./$@
+
 # Švaros taisyklė
 clean:
-	rm -f $(TARGET)_O1 $(TARGET)_O2 $(TARGET)_O3
+	rm -f $(TARGET)_O1 $(TARGET)_O2 $(TARGET)_O3 $(TESTS)
