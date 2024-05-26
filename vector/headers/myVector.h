@@ -15,6 +15,12 @@ private:
 public:
     // Constructor
     Vector() : data(nullptr), size_(0), capacity_(0) {}
+    // Constructor with inializer list
+    Vector(std::initializer_list<T> list) : data(nullptr), size_(0), capacity_(0) {
+        for (const auto& element : list) {
+            push_back(element);
+            }
+            }
 
     // Destructor
     ~Vector() { delete[] data; }
@@ -101,6 +107,18 @@ public:
     size_t capacity() const {
         return capacity_;
         }
+    //shrink_to_fit
+    void shrink_to_fit() {
+        if (size_ < capacity_) {
+            T* new_data = new T[size_];
+            for (size_t i = 0; i < size_; ++i) {
+                new_data[i] = std::move(data[i]);
+                }
+                delete[] data;
+                data = new_data;
+                capacity_ = size_;
+                }
+    }
 
     // empty
     bool empty() const {
@@ -124,6 +142,17 @@ public:
     const T* end() const {
         return data + size_;
     }
+    //erase for v.erase(1);
+    void erase(size_t pos) {
+        if (pos >= size_) {
+            throw std::out_of_range("Index out of range");
+            }
+            for (size_t i = pos; i < size_ - 1; ++i) {
+                data[i] = std::move(data[i + 1]);
+            }
+            --size_;
+            shrink_to_fit();
+            }
 
     // erase
     T* erase(T* pos) {
@@ -183,6 +212,36 @@ public:
         ++size_;
         return data + index;
     }
+    // insert 
+    T* insert(T* pos, T&& value ){
+        if (pos < data || pos > data + size_) {
+            throw std::out_of_range("Vector::insert: position out of range");
+            }
+            size_t index = pos - data;
+            if (size_ == capacity_) {
+                size_t new_capacity = (capacity_ == 0) ? 1 : capacity_ * 2;
+                T* new_data = new T[new_capacity];
+                for (size_t i = 0; i < index; ++i) {
+                    new_data[i] = std::move(data[i]);
+                    }
+                    new_data[index] = std::move(value);
+                    for (size_t i = index; i < size_; ++i) {
+                        new_data[i + 1] = std::move(data[i]);
+                        }
+                        delete[] data;
+                        data = new_data;
+                        capacity_ = new_capacity;
+                        } else {
+                            for (size_t i = size_; i > index; --i) {
+                                data[i] = std::move(data[i - 1]);
+                                }
+                                data[index] = std::move(value);
+                                }
+                                ++size_;
+                                return data + index;
+                                }
+        
+                                            
 
     // reserve
     void reserve(size_t new_capacity) {
@@ -254,11 +313,11 @@ public:
     }
 
     // data
-    T* data_ptr() {
+    T* data2() {
         return data;
     }
 
-    const T* data_ptr() const {
+    const T* data2() const {
         return data;
     }
 
@@ -275,6 +334,19 @@ public:
         }
         size_ = new_size;
     }
+    //assign for v.assign(10, 5);
+    void assign(size_t count, const T& value) {
+        if (count > capacity_) {
+            delete[] data;
+            capacity_ = count;
+            data = new T[capacity_];
+            }
+            for (size_t i = 0; i < count; ++i) {
+                data[i] = value;
+                }
+                size_ = count;
+                }
+
 
     // operator[]
     T& operator[](size_t index) {
@@ -284,5 +356,46 @@ public:
     const T& operator[](size_t index) const {
         return data[index];
     }
+    //emplace
+    template <typename... Args>
+    void emplace_back(Args&&... args) {
+        if (size_ == capacity_) {
+            capacity_ *= 2;
+            T* new_data = new T[capacity_];
+            for (size_t i = 0; i < size_; ++i) {
+                new_data[i] = std::move(data[i]);
+                }
+                delete[] data;
+                data = new_data;
+                }
+                data[size_++] = T(std::forward<Args>(args)...);
+                }
+    //emplace
+    template <typename... Args>
+    void emplace(size_t index, Args&&... args) {
+        if (index > size_) {
+            throw std::out_of_range("Index out of range");
+            }
+            if (size_ == capacity_) {
+                capacity_ *= 2;
+                T* new_data = new T[capacity_];
+                for (size_t i = 0; i < index; ++i) {
+                    new_data[i] = std::move(data[i]);
+                    }
+                    for (size_t i = size_; i > index; --i) {
+                        new_data[i] = std::move(data[i - 1]);
+                        }
+                        delete[] data;
+                        data = new_data;
+                        }
+                        data[index] = T(std::forward<Args>(args)...);
+                        size_++;
+    }
+    //swap
+    void swap(Vector& other) {
+        std::swap(data, other.data);
+        std::swap(size_, other.size_);
+        std::swap(capacity_, other.capacity_);
+        }
 };
 #endif
