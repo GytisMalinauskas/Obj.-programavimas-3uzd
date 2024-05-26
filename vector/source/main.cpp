@@ -19,9 +19,13 @@ int main()
         // Pradėti v1 užpildymo laiko matavimą
         auto start1 = chrono::high_resolution_clock::now();
 unsigned int sz = 100000000;  // 100000, 1000000, 10000000, 100000000
+int v1p=0,v2p=0;
 std::vector<int> v1;
 for (unsigned int i = 1; i <= sz; ++i)
-  v1.push_back(i);
+  {v1.push_back(i);
+  if(v1.size()==v1.capacity())
+  v1p++;
+  }
 // Baigti v1 užpildymo laiko matavimą
 auto end1 = chrono::high_resolution_clock::now();
 auto duration1 = chrono::duration_cast<chrono::microseconds>(end1-start1).count();
@@ -30,11 +34,16 @@ cout<<"std::vector uzpildymas truko: "<<duration1/1000.0<<" mikrosekundes"<<endl
 auto start2 = chrono::high_resolution_clock::now();
 Vector<int> v2;
 for (unsigned int i = 1; i <= sz; ++i)
-  v2.push_back(i);
+  {v2.push_back(i);
+  if(v2.size()==v2.capacity())
+  v2p++;
+  }
 // Baigti v2 užpildymo laiko matavimą 
 auto end2 = chrono::high_resolution_clock::now();
 auto duration2 = chrono::duration_cast<chrono::microseconds>(end2-start2).count();
 cout<<"Vector uzpildymas truko: "<<duration2/1000.0<<" mikrosekundes"<<endl;
+cout<<"std::vector realokacijos: "<<v1p<<endl;
+cout<<"Vector realokacijos: "<<v2p<<endl;
         //zmogus zm;
         /*
         studentas studentas1("Gytis", "Malinauskas");

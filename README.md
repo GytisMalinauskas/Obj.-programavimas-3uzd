@@ -21,6 +21,8 @@
 | 10000000  | 68.139 | 28.273 |
 | 100000000  | 585.604 | 393.132 |
 
+*100000000 elementu uzpildymo metu ivyksta po 27 perskirstymus*
+
 # Programos naudojimo instrukcija
 
 Ši programa leidžia vartotojui įvesti ir išvesti duomenis keliais skirtingais būdais, priklausomai nuo pasirinkto programos veikimo būdo. Žemiau pateikiama išsami instrukcija, kaip naudoti programą.
