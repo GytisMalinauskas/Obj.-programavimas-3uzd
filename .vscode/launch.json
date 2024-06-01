@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/names/Obj.-programavimas-3uzd/vector/source",
-      "program": "/home/names/Obj.-programavimas-3uzd/vector/source/build/Debug/outDebug",
+      "cwd": "/home/names/Obj.-programavimas-3uzd/vector/test",
+      "program": "/home/names/Obj.-programavimas-3uzd/vector/test/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
