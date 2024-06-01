@@ -95,50 +95,111 @@
 ### funkcija `push_back()`
 *Ši funkcija prideda elementą į vektoriaus galą.*
 ```cpp
+#include <iostream>
+#include <myVector.h>
+using namespace std;
+int main()
+{
 Vector<int> vec;
 vec.push_back(10);
 vec.push_back(20); 
 //dabar vektorius vec turi 2 elementus vec=={10,20}
+for(int i=0; i<2 i++)
+{
+  cout << "myVector "<<i<<" elementas: "<<vec[i] << endl;
+}
+return 0;
+}
 ```
 
 ### funkcija `pop_back()`
 *Ši funkcija pašalina elementą iš vektoriaus galo.*
 ```cpp
+#include <iostream>
+#include <myVector.h>
+using namespace std;
+int main()
+{
 Vector<int> vec {10,20,30};
 vec.pop_back(); 
 //dabar vektorius vec turi tik 2 elementus vec=={10,20}
+for(int i=0; i<2 i++)
+{
+  cout << "myVector "<<i<<" elementas: "<<vec[i] << endl;
+}
+return 0;
+}
 ```
 
 ### funkcija `size()`
 *Ši funkcija gražina vektoriaus dydį.*
 ```cpp
+#include <iostream>
+#include <myVector.h>
+using namespace std;
+int main()
+{
 Vector<int> vec {10,20,30};
 size_t size = vec.size(); 
 //vektoriaus dydis yra lygus 3
+cout<< "myVector dydis yra: "<< size<<endl;
+return 0;
+}
 ```
 
 ### funkcija `empty()`
 *Ši funkcija patikrina ar vektorius yra tuščias.*
 ```cpp
+#include <iostream>
+#include <myVector.h>
+using namespace std;
+int main()
+{
 Vector<int> vec;
 bool is_empty = vec.empty(); 
 //Gražinama reikšmė is_empty==true
+if(is_empty) cout<<"myVector yra tusčias"<<endl;
+else cout<<"myVector nėra tusčias"<<endl;
+return 0;
+}
 ```
 
 ### funkcija `assign()`
 *Ši funkcija priskiria naują reikšmę vektoriui*
 ```cpp
+#include <iostream>
+#include <myVector.h>
+using namespace std;
+int main()
+{
 Vector<int> vec;
 vec.assign(3, 7);
 //dabar vektorius vec turi 3 elementus vec=={7,7,7}
+for(int i=0; i<3 i++)
+{
+  cout << "myVector "<<i<<" elementas: "<<vec[i] << endl;
+}
+return 0;
+}
 ```
 
 ### funkcija `clear()`
 *Ši funkcija išvalo vektorių.*
 ```cpp
+#include <iostream>
+#include <myVector.h>
+using namespace std;
+int main()
+{
 Vector<int> vec {10,20,30};
 vec.clear(); 
 //vektoriaus vec dabar jau tusčias
+bool is_empty = vec.empty(); 
+//Gražinama reikšmė is_empty==true
+if(is_empty) cout<<"myVector yra tusčias"<<endl;
+else cout<<"myVector nėra tusčias"<<endl;
+return 0;
+}
 ```
 
 # Programos naudojimo instrukcija
