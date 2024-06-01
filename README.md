@@ -2,13 +2,13 @@
 **Sistemos specifikacijos**\
 *CPU: 2,6 GHz 6-Core Intel Core i7*\
 *RAM: 16 GB 2400 MHz DDR4*\
-*HDD: Macintosh HD 500GB*\
+*HDD: Macintosh HD 500GB*
 
 
 ## Vector ir std::vector uzpildymo tyrimas
 
 *Vetoriams uzpildyti naudota `push_back()` funkcija*\
-*Tyrimas atliktas uzpildant su*\ 
+*Tyrimas atliktas uzpildant su* 
 *10000, 100000, 10000000, 10000000, 100000000 elementu*\
 *Tyrimui naudotas -O3 optimizavimo flagas*\
 *Laikai aprasyti milisekundziu formatu*
