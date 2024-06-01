@@ -89,6 +89,58 @@
 | Studentu Skirstymas | 0.693  | 0.639  | 0.602  |
 | `.exe` Failo dydis  | 99 KB  | 102 KB | 122 KB |
 
+# Funkcijos
+*Šioje skiltyje aprašysiu savo vektoriaus penkias funkcijas*
+
+### funkcija `push_back()`
+*Ši funkcija prideda elementą į vektoriaus galą.*
+```cpp
+Vector<int> vec;
+vec.push_back(10);
+vec.push_back(20); 
+//dabar vektorius vec turi 2 elementus vec=={10,20}
+```
+
+### funkcija `pop_back()`
+*Ši funkcija pašalina elementą iš vektoriaus galo.*
+```cpp
+Vector<int> vec {10,20,30};
+vec.pop_back(); 
+//dabar vektorius vec turi tik 2 elementus vec=={10,20}
+```
+
+### funkcija `size()`
+*Ši funkcija gražina vektoriaus dydį.*
+```cpp
+Vector<int> vec {10,20,30};
+size_t size = vec.size(); 
+//vektoriaus dydis yra lygus 3
+```
+
+### funkcija `empty()`
+*Ši funkcija patikrina ar vektorius yra tuščias.*
+```cpp
+Vector<int> vec;
+bool is_empty = vec.empty(); 
+//Gražinama reikšmė is_empty==true
+```
+
+### funkcija `assign()`
+*Ši funkcija priskiria naują reikšmę vektoriui*
+```cpp
+Vector<int> vec;
+vec.assign(3, 7);
+//dabar vektorius vec turi 3 elementus vec=={7,7,7}
+```
+
+### funkcija `clear()`
+*Ši funkcija išvalo vektorių.*
+```cpp
+Vector<int> vec {10,20,30};
+vec.clear(); 
+//vektoriaus vec dabar jau tusčias
+```
+
 # Programos naudojimo instrukcija
 
 Ši programa leidžia vartotojui įvesti ir išvesti duomenis keliais skirtingais būdais, priklausomai nuo pasirinkto programos veikimo būdo. Žemiau pateikiama išsami instrukcija, kaip naudoti programą.
