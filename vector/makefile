@@ -1,6 +1,6 @@
 # Kompiliatoriaus nustatymai
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Iheaders -Icatch2
+CXXFLAGS = -std=c++11 -m64 -Wall -Iheaders -Icatch2
 
 # Šaltinio failai
 SRC = $(wildcard source/*.cpp)
@@ -23,13 +23,13 @@ all: $(OPT_LEVELS)
 
 # Targets for each optimization level
 O1: CXXFLAGS += $(OPT_FLAGS_O1)
-O1: $(TARGET)_O1
+O1: $(TARGET)_O1.exe
 
 O2: CXXFLAGS += $(OPT_FLAGS_O2)
-O2: $(TARGET)_O2
+O2: $(TARGET)_O2.exe
 
 O3: CXXFLAGS += $(OPT_FLAGS_O3)
-O3: $(TARGET)_O3
+O3: $(TARGET)_O3.exe
 
 # Vykdomojo failo taisyklė
 $(TARGET)_O1:
@@ -47,9 +47,9 @@ $(TARGET)_O3:
 # Testų vykdymo taisyklė
 test: $(TESTS) $(SRC_NO_MAIN)
 	@echo "Building and running tests..."
-	$(CXX) $(CXXFLAGS) -o test_executable $(TESTS) $(SRC_NO_MAIN)
-	./test_executable
+	$(CXX) $(CXXFLAGS) -o test_executable.exe $(TESTS) $(SRC_NO_MAIN)
+	./test_executable.exe
 
 # Švaros taisyklė
 clean:
-	rm -f $(TARGET)_O1 $(TARGET)_O2 $(TARGET)_O3 test_executable
+	rm -f $(TARGET)_O1.exe $(TARGET)_O2.exe $(TARGET)_O3 test_executable.exe
