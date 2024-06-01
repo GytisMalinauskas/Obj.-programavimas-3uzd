@@ -8,5 +8,5 @@
 #include "function.h"
 #include "zmogus.h"
 #include "myVector.h"
-
+#include "globals.h"
 #endif

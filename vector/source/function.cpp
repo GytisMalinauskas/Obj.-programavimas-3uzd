@@ -1,4 +1,5 @@
 #include "../headers/function.h"
+#include "../headers/studentas.h"
 
 studentas::studentas():zmogus(){
   nd.clear();
@@ -275,7 +276,10 @@ bool isBelowMedian(const studentas& stud) {
 void FailoSkaitymas(Vector <studentas> &s, string &duomPav)
 {
   try{
-  system("ls *.txt");
+  int ret = system("dir *.txt");
+    if (ret != 0) {
+        std::cerr << "Error executing system command 'dir *.txt'" << std::endl;
+    }
     cout << "Pasirinkite duomenų failą: ";
     cin >> duomPav;
     ifstream in(duomPav);

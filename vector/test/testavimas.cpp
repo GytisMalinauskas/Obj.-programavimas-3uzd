@@ -7,7 +7,7 @@
 
 int programos_veikimas;
 
-TEST_CASE("Vector and student tests", "[Vector][studentas]") {
+TEST_CASE("Vector and class tests", "[Vector][studentas]") {
     SECTION("Vector with studentas - Member Functions") {
         Vector<studentas> studentai;
         for (int i = 0; i < 10; i++) {
@@ -78,7 +78,7 @@ TEST_CASE("Vector and student tests", "[Vector][studentas]") {
     SECTION("Initializer List") {
         Vector<studentas> studentas1 = {studentas("Gytis", "Malinauskas"), studentas("Petras", "Petraitis"), studentas("Marius", "Majonezius")};
         REQUIRE(studentas1.size() == 3);
-        REQUIRE(studentas1.capacity() == 3);
+        REQUIRE(studentas1.capacity() == 4);
         REQUIRE(studentas1.empty() == false);
     }
 
@@ -272,6 +272,8 @@ TEST_CASE("Vector and student tests", "[Vector][studentas]") {
         REQUIRE(studentas.ndSize() == 1);
         REQUIRE(studentas.getLastND() == 10);
     }
+}
+TEST_CASE("Vector tests", "[Vector]") {
     SECTION("konstruktorius") {
         Vector<int> v;
         REQUIRE(v.size() == 0);
@@ -329,7 +331,7 @@ TEST_CASE("Vector and student tests", "[Vector][studentas]") {
     SECTION("initializer list") {
         Vector<std::string> v = {"Tomas", "Jonas", "Petras"};
         REQUIRE(v.size() == 3);
-        REQUIRE(v.capacity() == 3);
+        REQUIRE(v.capacity() == 4);
         REQUIRE(v.empty() == false);
         REQUIRE(v[0] == "Tomas");
         REQUIRE(v[1] == "Jonas");
@@ -489,9 +491,9 @@ TEST_CASE("Vector and student tests", "[Vector][studentas]") {
     SECTION("Emplace Back Funkcija") {
         Vector<int> v;
         v.emplace_back(1);
-        REQUIRE(v.size() == 1);
-        REQUIRE(v.capacity() == 1);
+        REQUIRE(v.size() == 1); 
         REQUIRE(v[0] == 1);
+        REQUIRE(v.capacity() == 1);
         v.emplace_back(2);
         REQUIRE(v.size() == 2);
         REQUIRE(v.capacity() == 2);

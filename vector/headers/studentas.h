@@ -7,6 +7,7 @@
 #include <algorithm>
 #include "zmogus.h"
 #include "myVector.h"
+#include "globals.h"
 using namespace std;
 
 class studentas : public zmogus
@@ -54,11 +55,5 @@ class studentas : public zmogus
 
  ~studentas();
 };
-extern int number1;
-extern int skaicius;
-extern vector<string> names;
-extern vector<string> surnames;
 extern Vector <studentas> s; //studentai
-extern int n;
-extern int m;
 #endif

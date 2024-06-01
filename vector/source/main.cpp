@@ -1,8 +1,5 @@
 #include "../headers/main.h"
-int number1,skaicius,n,m;  
-vector<string> names;
-vector<string> surnames;
-Vector <studentas> s; //studentai
+
 int main() 
 {
   try{

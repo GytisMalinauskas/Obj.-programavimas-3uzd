@@ -357,19 +357,21 @@ public:
         return data[index];
     }
     //emplace
-    template <typename... Args>
+template <class... Args>
     void emplace_back(Args&&... args) {
         if (size_ == capacity_) {
-            capacity_ *= 2;
-            T* new_data = new T[capacity_];
+            size_t new_capacity = (capacity_ == 0) ? 1 : capacity_ * 2;
+            T* new_data = new T[new_capacity];
             for (size_t i = 0; i < size_; ++i) {
                 new_data[i] = std::move(data[i]);
-                }
-                delete[] data;
-                data = new_data;
-                }
-                data[size_++] = T(std::forward<Args>(args)...);
-                }
+            }
+            delete[] data;
+            data = new_data;
+            capacity_ = new_capacity;
+        }
+        data[size_++] = T(std::forward<Args>(args)...);
+    }
+
     //emplace
     template <typename... Args>
     void emplace(size_t index, Args&&... args) {

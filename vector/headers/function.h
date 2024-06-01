@@ -22,6 +22,7 @@
 #include "error.h"
 #include "zmogus.h"
 #include "myVector.h"
+#include "globals.h"
 
 void Skaicius1(Vector<studentas>& s, int &m, int skaicius, int MinP, int MaxP);
 void Skaicius2(Vector<studentas>& s, int skaicius, int MinP, int MaxP);
