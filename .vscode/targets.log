@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun  1 11:10:41 2024
+# Make data base, printed on Sat Jun  1 19:09:01 2024
 
 # Variables
 
@@ -95,7 +93,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /home/names/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/libnvvp:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/Python38/Scripts/:/mnt/c/Program Files/Python38/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.3.1/:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/doxygen/bin:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/Gytis/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Gytis/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Gytis/AppData/Roaming/npm:/mnt/c/MinGW/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Gytis/AppData/Local/GitHubDesktop/bin:/snap/bin
+PATH = /home/names/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/libnvvp:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/Python38/Scripts/:/mnt/c/Program Files/Python38/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.3.1/:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/doxygen/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/Gytis/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Gytis/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Gytis/AppData/Roaming/npm:/mnt/c/MinGW/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Gytis/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Gytis/.dotnet/tools:/snap/bin
 # default
 MAKEFILES := 
 # automatic
@@ -113,7 +111,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 +F = $(notdir $+)
 # environment
-WSL_INTEROP = /run/WSL/472_interop
+WSL_INTEROP = /run/WSL/476_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -133,7 +131,7 @@ _ = /home/names/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/node
 # environment
 XDG_RUNTIME_DIR = /run/user/1000/
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-dbd1a94a-7587-407e-84c4-a06e588a01f1.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-713259b6-9917-4ce8-b307-c27363c9c89f.sock
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -219,6 +217,8 @@ GNUmakefile:
 # strcache performance: lookups = 17 / hit rate = 17%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=0/17=0%
-# Finished Make data base on Sat Jun  1 11:10:41 2024
+# Finished Make data base on Sat Jun  1 19:09:01 2024
 
  
+make: *** No rule to make target 'all'.  Stop.
+

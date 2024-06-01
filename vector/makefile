@@ -49,7 +49,6 @@ test: $(TESTS) $(SRC_NO_MAIN)
 	@echo "Building and running tests..."
 	$(CXX) $(CXXFLAGS) -o test_executable $(TESTS) $(SRC_NO_MAIN)
 	./test_executable
-	@rm -f test_executable
 
 # Švaros taisyklė
 clean:
