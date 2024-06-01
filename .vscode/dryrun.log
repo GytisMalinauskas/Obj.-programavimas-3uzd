@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/names/Obj.-programavimas-3uzd'
+make: Leaving directory '/home/names/Obj.-programavimas-3uzd'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
