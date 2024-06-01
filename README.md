@@ -8,7 +8,7 @@
 ## Vector ir std::vector uzpildymo tyrimas
 
 *Vetoriams uzpildyti naudota `push_back()` funkcija*\
-*Tyrimas atliktas uzpildant su*\ 
+*Tyrimas atliktas uzpildant su* 
 *10000, 100000, 10000000, 10000000, 100000000 elementu*\
 *Tyrimui naudotas -O3 optimizavimo flagas*\
 *Laikai aprasyti milisekundziu formatu*
