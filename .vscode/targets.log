@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun  1 09:29:57 2024
+# Make data base, printed on Sat Jun  1 09:54:03 2024
 
 # Variables
 
@@ -98,8 +98,6 @@ MAKE = $(MAKE_COMMAND)
 PATH = /home/names/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/libnvvp:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/Python38/Scripts/:/mnt/c/Program Files/Python38/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.3.1/:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/Gytis/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/Gytis/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Gytis/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Gytis/AppData/Roaming/npm:/mnt/c/MinGW/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Gytis/AppData/Local/GitHubDesktop/bin:/snap/bin
 # default
 MAKEFILES := 
-# environment
-MOTD_SHOWN = update-motd
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -115,7 +113,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 +F = $(notdir $+)
 # environment
-WSL_INTEROP = /run/WSL/489_interop
+WSL_INTEROP = /run/WSL/12334_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -135,7 +133,7 @@ _ = /home/names/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/node
 # environment
 XDG_RUNTIME_DIR = /run/user/1000/
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-68cdfc48-e94c-42b7-ac69-04d775393fbd.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-8d16b4ed-c711-4e1d-9f2a-07c7c0487c9c.sock
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -155,7 +153,7 @@ WSL_DISTRO_NAME = Ubuntu
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # variable set hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=2/98=2%
+# Load=70/1024=7%, Rehash=0, Collisions=2/97=2%
 
 # Pattern-specific Variable Values
 
@@ -221,6 +219,6 @@ GNUmakefile:
 # strcache performance: lookups = 16 / hit rate = 18%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=0/16=0%
-# Finished Make data base on Sat Jun  1 09:29:57 2024
+# Finished Make data base on Sat Jun  1 09:54:03 2024
 
  
