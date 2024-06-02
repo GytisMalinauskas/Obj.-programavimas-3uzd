@@ -201,7 +201,15 @@ else cout<<"myVector nėra tusčias"<<endl;
 return 0;
 }
 ```
-
+# Programos įdiegimo instrukcija
+```
+  -Paspauskite 2 kartus ant setup.exe failo.
+  -Pasirodžiusioje lentelėje spauskite `Yes`.
+  -Tada spauskite `Install`.
+  -Programa turėtų pasileisti automatiškai.
+  -Jums turėtų išmesti 4 terminalo langus, vienas jų yra testams .patikrinti, kiti 3 yra programos su skirtingais optimizavimo flagais.
+  -Ant jūsų ekrano bus instaliuoti visi šie terminalai. Kokio tipo tai terminalas nurodyta pavadinime.
+```
 # Programos naudojimo instrukcija
 
 Ši programa leidžia vartotojui įvesti ir išvesti duomenis keliais skirtingais būdais, priklausomai nuo pasirinkto programos veikimo būdo. Žemiau pateikiama išsami instrukcija, kaip naudoti programą.
