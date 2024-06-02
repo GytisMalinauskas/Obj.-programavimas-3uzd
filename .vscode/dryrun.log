@@ -1,6 +1,0 @@
-make.exe --dry-run --always-make --keep-going --print-directory
-make: Entering directory 'c:/Users/Gytis/Desktop/v3.0/Obj.-programavimas-3uzd'
-make: Leaving directory 'c:/Users/Gytis/Desktop/v3.0/Obj.-programavimas-3uzd'
- 
-make: *** No targets specified and no makefile found.  Stop.
-
