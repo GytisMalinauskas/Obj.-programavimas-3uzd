@@ -59,4 +59,5 @@ run_tests: test_executable.exe
 
 # Clean rule
 clean:
-	rm -f $(TARGET)_O1.exe $(TARGET)_O2.exe $(TARGET)_O3.exe test_executable.exe
+	@echo "Cleaning up..."
+	@del $(TARGET)_O1.exe $(TARGET)_O2.exe $(TARGET)_O3.exe test_executable.exe

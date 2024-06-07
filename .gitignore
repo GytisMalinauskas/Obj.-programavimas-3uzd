@@ -1,0 +1,22 @@
+# Kompiliavimo produktai
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# IDE failai
+.vscode/
+
+# Konfigūraciniai failai
+*.iml
+.DS_Store
+Thumbs.db
+
+#rezultatai
+kieti.txt
+lievi.txt
